@@ -1,0 +1,121 @@
+{
+  "system_specs": {
+    "os": "Darwin 23.3.0",
+    "architecture": "arm64",
+    "cpu": "Apple M1 Pro",
+    "python_version": "3.12.1",
+    "python_implementation": "CPython",
+    "timestamp": "2026-09-25T17:07:42.272311+00:00"
+  },
+  "assertions": {
+    "ToolCalled": {
+      "avg_microseconds": 1.769,
+      "p95_microseconds": 1.914,
+      "throughput_ops_sec": 565256.5
+    },
+    "ToolOrder": {
+      "avg_microseconds": 2.085,
+      "p95_microseconds": 2.182,
+      "throughput_ops_sec": 479509.0
+    },
+    "ToolArguments": {
+      "avg_microseconds": 1.608,
+      "p95_microseconds": 1.704,
+      "throughput_ops_sec": 621950.0
+    },
+    "OutputContains": {
+      "avg_microseconds": 1.401,
+      "p95_microseconds": 1.597,
+      "throughput_ops_sec": 713831.1
+    },
+    "OutputEquals": {
+      "avg_microseconds": 1.367,
+      "p95_microseconds": 1.472,
+      "throughput_ops_sec": 731528.9
+    },
+    "MaxLatency": {
+      "avg_microseconds": 1.555,
+      "p95_microseconds": 1.905,
+      "throughput_ops_sec": 643086.8
+    },
+    "MaxCost": {
+      "avg_microseconds": 1.559,
+      "p95_microseconds": 1.743,
+      "throughput_ops_sec": 641606.5
+    },
+    "SchemaMatch": {
+      "avg_microseconds": 4.703,
+      "p95_microseconds": 4.921,
+      "throughput_ops_sec": 212627.2
+    }
+  },
+  "trace_processing": {
+    "iterations": 5000,
+    "total_seconds": 0.0829,
+    "avg_microseconds_per_trace": 16.59,
+    "traces_per_second": 60278.5
+  },
+  "evaluation_overhead": {
+    "scenarios": [
+      {
+        "scenario": "Customer Support Agent (Tool Order & Latency checks)",
+        "raw_agent_time_us": 0.48,
+        "with_aireliability_us": 38.93,
+        "added_overhead_us": 38.45,
+        "added_overhead_ms": 0.0385
+      },
+      {
+        "scenario": "Invoice Extraction Agent (JSON Schema check)",
+        "raw_agent_time_us": 0.2,
+        "with_aireliability_us": 15.59,
+        "added_overhead_us": 15.39,
+        "added_overhead_ms": 0.0154
+      },
+      {
+        "scenario": "Code Assistant Agent (OutputSubstring check)",
+        "raw_agent_time_us": 0.06,
+        "with_aireliability_us": 8.92,
+        "added_overhead_us": 8.86,
+        "added_overhead_ms": 0.0089
+      }
+    ]
+  },
+  "regression_detection": [
+    {
+      "test_suite_size": 50,
+      "regressions_detected": 0,
+      "comparison_mean_ms": 0.063,
+      "comparison_p95_ms": 0.065,
+      "evaluations_per_second": 793936.1
+    },
+    {
+      "test_suite_size": 200,
+      "regressions_detected": 2,
+      "comparison_mean_ms": 0.261,
+      "comparison_p95_ms": 0.325,
+      "evaluations_per_second": 765430.3
+    },
+    {
+      "test_suite_size": 1000,
+      "regressions_detected": 10,
+      "comparison_mean_ms": 1.509,
+      "comparison_p95_ms": 1.796,
+      "evaluations_per_second": 662716.2
+    },
+    {
+      "test_suite_size": 5000,
+      "regressions_detected": 50,
+      "comparison_mean_ms": 9.604,
+      "comparison_p95_ms": 19.521,
+      "evaluations_per_second": 520589.6
+    }
+  ],
+  "storage": {
+    "record_count": 1000,
+    "test_case_write_ops_sec": 2170.7,
+    "test_case_read_ops_sec": 155577.4,
+    "trace_eval_write_ops_sec": 1142.5,
+    "baseline_save_time_ms": 10.18,
+    "baseline_load_time_ms": 11.83
+  }
+}

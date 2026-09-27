@@ -1,0 +1,31 @@
+{
+  "test_id": "fixture-tool-order-001",
+  "name": "Deterministic Refund Sequence Ordering",
+  "input": "Refund order 123",
+  "expectations": [
+    {
+      "type": "tool_order",
+      "expected_order": ["get_order", "cancel_order", "refund_order"]
+    }
+  ],
+  "traces": {
+    "passing": {
+      "input": "Refund order 123",
+      "output": "Order 123 refunded successfully.",
+      "tool_calls": [
+        {"tool": "get_order", "args": {"order_id": 123}, "result": {"status": "placed"}},
+        {"tool": "cancel_order", "args": {"order_id": 123}, "result": {"status": "cancelled"}},
+        {"tool": "refund_order", "args": {"order_id": 123}, "result": {"status": "refunded"}}
+      ]
+    },
+    "failing": {
+      "input": "Refund order 123",
+      "output": "Refund issued.",
+      "tool_calls": [
+        {"tool": "get_order", "args": {"order_id": 123}, "result": {"status": "placed"}},
+        {"tool": "refund_order", "args": {"order_id": 123}, "result": {"status": "refunded"}},
+        {"tool": "cancel_order", "args": {"order_id": 123}, "result": {"status": "cancelled"}}
+      ]
+    }
+  }
+}

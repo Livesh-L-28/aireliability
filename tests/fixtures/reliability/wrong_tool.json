@@ -1,0 +1,27 @@
+{
+  "test_id": "fixture-wrong-tool-001",
+  "name": "Deterministic Wrong Tool Selection",
+  "input": "Calculate sales tax on item 456",
+  "expectations": [
+    {
+      "type": "tool_call",
+      "expected_tool": "calculate_tax"
+    }
+  ],
+  "traces": {
+    "passing": {
+      "input": "Calculate sales tax on item 456",
+      "output": "Sales tax calculated as $4.50",
+      "tool_calls": [
+        {"tool": "calculate_tax", "args": {"item_id": 456, "rate": 0.08}, "result": {"tax": 4.5}}
+      ]
+    },
+    "failing": {
+      "input": "Calculate sales tax on item 456",
+      "output": "Total price is $54.50",
+      "tool_calls": [
+        {"tool": "charge_card", "args": {"item_id": 456, "amount": 54.5}, "result": {"charged": true}}
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "test_id": "fixture-wrong-args-001",
+  "name": "Deterministic Wrong Tool Arguments",
+  "input": "Lookup user profile for id 789",
+  "expectations": [
+    {
+      "type": "tool_call",
+      "expected_tool": "lookup_user",
+      "expected_args": {"user_id": 789, "include_deleted": false}
+    }
+  ],
+  "traces": {
+    "passing": {
+      "input": "Lookup user profile for id 789",
+      "output": "Found user Alice.",
+      "tool_calls": [
+        {"tool": "lookup_user", "args": {"user_id": 789, "include_deleted": false}, "result": {"user": "Alice"}}
+      ]
+    },
+    "failing": {
+      "input": "Lookup user profile for id 789",
+      "output": "Found user Alice.",
+      "tool_calls": [
+        {"tool": "lookup_user", "args": {"user_id": 789, "include_deleted": true}, "result": {"user": "Alice"}}
+      ]
+    }
+  }
+}

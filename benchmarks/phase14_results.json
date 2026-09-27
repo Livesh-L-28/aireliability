@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-09-26T15:07:02.498067+00:00",
+  "system": {
+    "os": "Darwin 23.3.0",
+    "arch": "arm64",
+    "python": "3.12.1"
+  },
+  "scenarios": [
+    {
+      "id": "Scenario A",
+      "scenario": "Tool Ordering",
+      "nominal_passed": true,
+      "expected_category": "tool",
+      "expected_type": "wrong_order",
+      "detected": true,
+      "detected_types": [
+        "wrong_order"
+      ],
+      "regression_generated": true,
+      "regression_re_detected": true
+    },
+    {
+      "id": "Scenario B",
+      "scenario": "Wrong Tool",
+      "nominal_passed": true,
+      "expected_category": "tool",
+      "expected_type": "wrong_tool",
+      "detected": true,
+      "detected_types": [
+        "wrong_tool",
+        "unnecessary_tool"
+      ],
+      "regression_generated": true,
+      "regression_re_detected": true
+    },
+    {
+      "id": "Scenario C",
+      "scenario": "Wrong Tool Arguments",
+      "nominal_passed": true,
+      "expected_category": "tool",
+      "expected_type": "wrong_argument",
+      "detected": true,
+      "detected_types": [
+        "wrong_argument"
+      ],
+      "regression_generated": true,
+      "regression_re_detected": true
+    },
+    {
+      "id": "Scenario D",
+      "scenario": "Missing Required Tool",
+      "nominal_passed": true,
+      "expected_category": "tool",
+      "expected_type": "wrong_tool",
+      "detected": true,
+      "detected_types": [
+        "wrong_tool"
+      ],
+      "regression_generated": true,
+      "regression_re_detected": true
+    },
+    {
+      "id": "Scenario E",
+      "scenario": "Output Regression",
+      "nominal_passed": true,
+      "expected_category": "task",
+      "expected_type": "task_incorrect",
+      "detected": true,
+      "detected_types": [
+        "task_incorrect",
+        "task_incorrect"
+      ],
+      "regression_generated": true,
+      "regression_re_detected": true
+    },
+    {
+      "id": "Scenario F",
+      "scenario": "Latency Regression",
+      "nominal_passed": true,
+      "expected_category": "performance",
+      "expected_type": "latency",
+      "detected": true,
+      "detected_types": [
+        "latency"
+      ],
+      "regression_generated": true,
+      "regression_re_detected": true
+    }
+  ],
+  "baseline_states": {
+    "regression_verified": true,
+    "known_failure_verified": true,
+    "fixed_verified": true,
+    "passing_verified": true
+  },
+  "traceability": {
+    "regression_test_id": "reg_2793bbbe6a884c2ca28d8f5a81782ee4",
+    "source_failure_id": "fail_6f25813983a246878e1a6c1882c928d7",
+    "trace_id": "trace_79c8d833b71f4a689836d61d96085e9f",
+    "originating_test_id": "tc_root",
+    "chain_intact": "True"
+  },
+  "overhead": {
+    "iterations": 100,
+    "raw_agent_us": {
+      "mean": 0.07,
+      "median": 0.042,
+      "min": 0.041,
+      "max": 0.292
+    },
+    "with_aireliability_us": {
+      "mean": 8.459,
+      "median": 8.333,
+      "min": 7.833,
+      "max": 13.709
+    },
+    "added_overhead_us": {
+      "mean": 8.389,
+      "median": 8.271,
+      "min": 7.791,
+      "max": 13.501
+    }
+  }
+}

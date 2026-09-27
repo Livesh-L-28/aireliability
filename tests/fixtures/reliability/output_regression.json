@@ -1,0 +1,23 @@
+{
+  "test_id": "fixture-output-reg-001",
+  "name": "Deterministic Output Regression",
+  "input": "Summarize account status",
+  "expectations": [
+    {
+      "type": "exact_match",
+      "expected_output": "Account status: ACTIVE (Tier 1)"
+    }
+  ],
+  "traces": {
+    "passing": {
+      "input": "Summarize account status",
+      "output": "Account status: ACTIVE (Tier 1)",
+      "tool_calls": []
+    },
+    "failing": {
+      "input": "Summarize account status",
+      "output": "Account status: UNKNOWN",
+      "tool_calls": []
+    }
+  }
+}
