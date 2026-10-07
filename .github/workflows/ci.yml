@@ -17,33 +17,51 @@ permissions:
 
 jobs:
   lint:
-    name: Lint & Format Check (Ruff)
+    name: Code Quality (Ruff)
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: "pip"
 
-      - name: Install dependencies
+      - name: Install Linting Tools
         run: |
           python -m pip install --upgrade pip
           python -m pip install ruff
 
-      - name: Run Ruff Lint
+      - name: Ruff Lint Check
         run: ruff check .
 
-      - name: Run Ruff Format Check
+      - name: Ruff Formatting Check
         run: ruff format --check .
 
-  tests:
-    name: Tests (Python ${{ matrix.python-version }})
+  version:
+    name: Version Consistency
     runs-on: ubuntu-latest
-    needs: [lint]
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify Version Consistency Across Repository
+        run: python scripts/check_version.py
+
+  tests:
+    name: Core Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    needs: [lint, version]
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -58,57 +76,130 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: "pip"
 
-      - name: Install core package and dev dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e ".[dev]"
 
-      - name: Run test suite with JUnit report
+      - name: Run Core Test Suite (Unit, Integration, Security)
         run: |
-          pytest --junitxml=junit-results-${{ matrix.python-version }}.xml
+          pytest tests \
+            --junitxml=junit-core-${{ matrix.python-version }}.xml \
+            -v
 
-      - name: Upload test results artifact
+      - name: Upload Test Results Artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results-python-${{ matrix.python-version }}
-          path: junit-results-${{ matrix.python-version }}.xml
+          path: junit-core-${{ matrix.python-version }}.xml
           retention-days: 7
 
-  package:
-    name: Package Build & Clean Install Verification
+  demo:
+    name: Real-World Demo Verification
     runs-on: ubuntu-latest
-    needs: [tests]
+    needs: [lint]
+    timeout-minutes: 10
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
           cache: "pip"
 
-      - name: Install packaging tools
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Run Demo Test Suite (27 tests)
+        run: |
+          pytest examples/aireliability_demo/tests \
+            --junitxml=junit-demo.xml \
+            -v
+
+      - name: Execute Full 17-Step Autonomous Enterprise Demo
+        run: |
+          python scripts/run_full_workflow.py
+
+      - name: Upload Demo Results Artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: demo-test-results
+          path: junit-demo.xml
+          retention-days: 7
+
+  smoke-benchmark:
+    name: Performance Smoke Validation
+    runs-on: ubuntu-latest
+    needs: [lint]
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+          python -m pip install psutil
+
+      - name: Run Smoke Benchmarks
+        run: |
+          python benchmarks/run_benchmarks.py --smoke
+
+      - name: Upload Smoke Benchmark Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-benchmark-artifacts
+          path: benchmarks/results/
+          retention-days: 7
+
+  package-check:
+    name: Packaging & Clean Isolated Install
+    runs-on: ubuntu-latest
+    needs: [tests, demo, smoke-benchmark]
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Packaging Tools
         run: |
           python -m pip install --upgrade pip
           python -m pip install build twine
 
-      - name: Build package distribution (sdist and wheel)
+      - name: Build Source Distribution & Wheel
         run: python -m build
 
-      - name: Validate distribution metadata with Twine
-        run: |
-          ls -la dist/
-          twine check dist/*
+      - name: Validate Metadata with Twine
+        run: twine check dist/*.whl dist/*.tar.gz
 
-      - name: Clean environment installation test
+      - name: Clean Virtual Environment Installation Test
         run: |
-          # Create an isolated temporary virtual environment outside repository tree
-          python -m venv /tmp/aireliability-clean
-          /tmp/aireliability-clean/bin/pip install --upgrade pip
-          /tmp/aireliability-clean/bin/pip install dist/*.whl
-          
-          # Verify Python import and CLI entrypoint
-          /tmp/aireliability-clean/bin/python -c "import aireliability; print('aireliability version:', aireliability.__version__)"
-          /tmp/aireliability-clean/bin/airel --help
+          # Create isolated temporary virtual environment outside repository tree
+          python -m venv /tmp/clean-venv
+          /tmp/clean-venv/bin/pip install --upgrade pip
+          /tmp/clean-venv/bin/pip install dist/*.whl
+
+          # Verify import and CLI outside repo tree
+          cd /tmp
+          /tmp/clean-venv/bin/python -c "import aireliability; print('Imported version:', aireliability.__version__)"
+          /tmp/clean-venv/bin/airel --version
+          /tmp/clean-venv/bin/airel --help

@@ -1,0 +1,1102 @@
+[
+  {
+    "doc_id": "doc_evaluation_00000",
+    "title": "Production Reliability Guide: Evaluation Module 0",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 0. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-EVALUATION-0.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 0,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00001",
+    "title": "Production Reliability Guide: Rag Module 1",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 1. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-RAG-1.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 1,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00002",
+    "title": "Production Reliability Guide: Agents Module 2",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 2. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-AGENTS-2.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 2,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00003",
+    "title": "Production Reliability Guide: Safety Module 3",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 3. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-SAFETY-3.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 3,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00004",
+    "title": "Production Reliability Guide: Prediction Module 4",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 4. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-PREDICTION-4.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 4,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00005",
+    "title": "Production Reliability Guide: Policy Module 5",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 5. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-POLICY-5.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 5,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00006",
+    "title": "Production Reliability Guide: Governance Module 6",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 6. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-GOVERNANCE-6.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 6,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00007",
+    "title": "Production Reliability Guide: Evaluation Module 7",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 7. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-EVALUATION-7.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 7,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00008",
+    "title": "Production Reliability Guide: Rag Module 8",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 8. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-RAG-8.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 8,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00009",
+    "title": "Production Reliability Guide: Agents Module 9",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 9. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-AGENTS-9.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 9,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00010",
+    "title": "Production Reliability Guide: Safety Module 10",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 10. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-SAFETY-10.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 10,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00011",
+    "title": "Production Reliability Guide: Prediction Module 11",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 11. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-PREDICTION-11.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 11,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00012",
+    "title": "Production Reliability Guide: Policy Module 12",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 12. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-POLICY-12.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 12,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00013",
+    "title": "Production Reliability Guide: Governance Module 13",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 13. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-GOVERNANCE-13.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 13,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00014",
+    "title": "Production Reliability Guide: Evaluation Module 14",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 14. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-EVALUATION-14.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 14,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00015",
+    "title": "Production Reliability Guide: Rag Module 15",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 15. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-RAG-15.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 15,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00016",
+    "title": "Production Reliability Guide: Agents Module 16",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 16. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-AGENTS-16.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 16,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00017",
+    "title": "Production Reliability Guide: Safety Module 17",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 17. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-SAFETY-17.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 17,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00018",
+    "title": "Production Reliability Guide: Prediction Module 18",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 18. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-PREDICTION-18.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 18,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00019",
+    "title": "Production Reliability Guide: Policy Module 19",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 19. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-POLICY-19.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 19,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00020",
+    "title": "Production Reliability Guide: Governance Module 20",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 20. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-GOVERNANCE-20.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 20,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00021",
+    "title": "Production Reliability Guide: Evaluation Module 21",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 21. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-EVALUATION-21.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 21,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00022",
+    "title": "Production Reliability Guide: Rag Module 22",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 22. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-RAG-22.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 22,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00023",
+    "title": "Production Reliability Guide: Agents Module 23",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 23. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-AGENTS-23.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 23,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00024",
+    "title": "Production Reliability Guide: Safety Module 24",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 24. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-SAFETY-24.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 24,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00025",
+    "title": "Production Reliability Guide: Prediction Module 25",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 25. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-PREDICTION-25.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 25,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00026",
+    "title": "Production Reliability Guide: Policy Module 26",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 26. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-POLICY-26.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 26,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00027",
+    "title": "Production Reliability Guide: Governance Module 27",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 27. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-GOVERNANCE-27.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 27,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00028",
+    "title": "Production Reliability Guide: Evaluation Module 28",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 28. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-EVALUATION-28.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 28,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00029",
+    "title": "Production Reliability Guide: Rag Module 29",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 29. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-RAG-29.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 29,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00030",
+    "title": "Production Reliability Guide: Agents Module 30",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 30. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-AGENTS-30.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 30,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00031",
+    "title": "Production Reliability Guide: Safety Module 31",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 31. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-SAFETY-31.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 31,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00032",
+    "title": "Production Reliability Guide: Prediction Module 32",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 32. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-PREDICTION-32.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 32,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00033",
+    "title": "Production Reliability Guide: Policy Module 33",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 33. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-POLICY-33.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 33,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00034",
+    "title": "Production Reliability Guide: Governance Module 34",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 34. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-GOVERNANCE-34.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 34,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00035",
+    "title": "Production Reliability Guide: Evaluation Module 35",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 35. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-EVALUATION-35.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 35,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00036",
+    "title": "Production Reliability Guide: Rag Module 36",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 36. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-RAG-36.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 36,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00037",
+    "title": "Production Reliability Guide: Agents Module 37",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 37. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-AGENTS-37.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 37,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00038",
+    "title": "Production Reliability Guide: Safety Module 38",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 38. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-SAFETY-38.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 38,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00039",
+    "title": "Production Reliability Guide: Prediction Module 39",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 39. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-PREDICTION-39.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 39,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00040",
+    "title": "Production Reliability Guide: Policy Module 40",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 40. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-POLICY-40.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 40,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00041",
+    "title": "Production Reliability Guide: Governance Module 41",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 41. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-GOVERNANCE-41.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 41,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00042",
+    "title": "Production Reliability Guide: Evaluation Module 42",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 42. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-EVALUATION-42.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 42,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00043",
+    "title": "Production Reliability Guide: Rag Module 43",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 43. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-RAG-43.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 43,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00044",
+    "title": "Production Reliability Guide: Agents Module 44",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 44. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-AGENTS-44.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 44,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00045",
+    "title": "Production Reliability Guide: Safety Module 45",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 45. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-SAFETY-45.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 45,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00046",
+    "title": "Production Reliability Guide: Prediction Module 46",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 46. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-PREDICTION-46.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 46,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00047",
+    "title": "Production Reliability Guide: Policy Module 47",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 47. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-POLICY-47.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 47,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00048",
+    "title": "Production Reliability Guide: Governance Module 48",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 48. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-GOVERNANCE-48.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 48,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00049",
+    "title": "Production Reliability Guide: Evaluation Module 49",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 49. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-EVALUATION-49.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 49,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00050",
+    "title": "Production Reliability Guide: Rag Module 50",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 50. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-RAG-50.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 50,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00051",
+    "title": "Production Reliability Guide: Agents Module 51",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 51. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-AGENTS-51.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 51,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00052",
+    "title": "Production Reliability Guide: Safety Module 52",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 52. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-SAFETY-52.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 52,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00053",
+    "title": "Production Reliability Guide: Prediction Module 53",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 53. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-PREDICTION-53.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 53,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00054",
+    "title": "Production Reliability Guide: Policy Module 54",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 54. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-POLICY-54.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 54,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00055",
+    "title": "Production Reliability Guide: Governance Module 55",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 55. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-GOVERNANCE-55.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 55,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00056",
+    "title": "Production Reliability Guide: Evaluation Module 56",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 56. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-EVALUATION-56.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 56,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00057",
+    "title": "Production Reliability Guide: Rag Module 57",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 57. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-RAG-57.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 57,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00058",
+    "title": "Production Reliability Guide: Agents Module 58",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 58. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-AGENTS-58.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 58,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00059",
+    "title": "Production Reliability Guide: Safety Module 59",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 59. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-SAFETY-59.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 59,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00060",
+    "title": "Production Reliability Guide: Prediction Module 60",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 60. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-PREDICTION-60.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 60,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00061",
+    "title": "Production Reliability Guide: Policy Module 61",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 61. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-POLICY-61.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 61,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00062",
+    "title": "Production Reliability Guide: Governance Module 62",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 62. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-GOVERNANCE-62.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 62,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00063",
+    "title": "Production Reliability Guide: Evaluation Module 63",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 63. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-EVALUATION-63.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 63,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00064",
+    "title": "Production Reliability Guide: Rag Module 64",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 64. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-RAG-64.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 64,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00065",
+    "title": "Production Reliability Guide: Agents Module 65",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 65. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-AGENTS-65.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 65,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00066",
+    "title": "Production Reliability Guide: Safety Module 66",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 66. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-SAFETY-66.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 66,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00067",
+    "title": "Production Reliability Guide: Prediction Module 67",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 67. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-PREDICTION-67.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 67,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00068",
+    "title": "Production Reliability Guide: Policy Module 68",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 68. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-POLICY-68.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 68,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00069",
+    "title": "Production Reliability Guide: Governance Module 69",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 69. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-GOVERNANCE-69.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 69,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00070",
+    "title": "Production Reliability Guide: Evaluation Module 70",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 70. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-EVALUATION-70.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 70,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00071",
+    "title": "Production Reliability Guide: Rag Module 71",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 71. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-RAG-71.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 71,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00072",
+    "title": "Production Reliability Guide: Agents Module 72",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 72. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-AGENTS-72.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 72,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00073",
+    "title": "Production Reliability Guide: Safety Module 73",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 73. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-SAFETY-73.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 73,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00074",
+    "title": "Production Reliability Guide: Prediction Module 74",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 74. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-PREDICTION-74.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 74,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00075",
+    "title": "Production Reliability Guide: Policy Module 75",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 75. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-POLICY-75.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 75,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00076",
+    "title": "Production Reliability Guide: Governance Module 76",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 76. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-GOVERNANCE-76.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 76,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00077",
+    "title": "Production Reliability Guide: Evaluation Module 77",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 77. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-EVALUATION-77.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 77,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00078",
+    "title": "Production Reliability Guide: Rag Module 78",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 78. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-RAG-78.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 78,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00079",
+    "title": "Production Reliability Guide: Agents Module 79",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 79. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-AGENTS-79.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 79,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00080",
+    "title": "Production Reliability Guide: Safety Module 80",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 80. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-SAFETY-80.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 80,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00081",
+    "title": "Production Reliability Guide: Prediction Module 81",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 81. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-PREDICTION-81.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 81,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00082",
+    "title": "Production Reliability Guide: Policy Module 82",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 82. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-POLICY-82.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 82,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00083",
+    "title": "Production Reliability Guide: Governance Module 83",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 83. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-GOVERNANCE-83.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 83,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00084",
+    "title": "Production Reliability Guide: Evaluation Module 84",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 84. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-EVALUATION-84.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 84,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00085",
+    "title": "Production Reliability Guide: Rag Module 85",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 85. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-RAG-85.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 85,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00086",
+    "title": "Production Reliability Guide: Agents Module 86",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 86. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-AGENTS-86.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 86,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00087",
+    "title": "Production Reliability Guide: Safety Module 87",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 87. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-SAFETY-87.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 87,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00088",
+    "title": "Production Reliability Guide: Prediction Module 88",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 88. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-PREDICTION-88.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 88,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00089",
+    "title": "Production Reliability Guide: Policy Module 89",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 89. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-POLICY-89.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 89,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00090",
+    "title": "Production Reliability Guide: Governance Module 90",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 90. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 0. Reference key: REF-GOVERNANCE-90.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 90,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00091",
+    "title": "Production Reliability Guide: Evaluation Module 91",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 91. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 1. Reference key: REF-EVALUATION-91.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 91,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00092",
+    "title": "Production Reliability Guide: Rag Module 92",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 92. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 2. Reference key: REF-RAG-92.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 92,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_agents_00093",
+    "title": "Production Reliability Guide: Agents Module 93",
+    "category": "agents",
+    "content": "This document provides verified specifications for agents module 93. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 3. Reference key: REF-AGENTS-93.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 93,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_safety_00094",
+    "title": "Production Reliability Guide: Safety Module 94",
+    "category": "safety",
+    "content": "This document provides verified specifications for safety module 94. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 4. Reference key: REF-SAFETY-94.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 94,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_prediction_00095",
+    "title": "Production Reliability Guide: Prediction Module 95",
+    "category": "prediction",
+    "content": "This document provides verified specifications for prediction module 95. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 5. Reference key: REF-PREDICTION-95.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 95,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_policy_00096",
+    "title": "Production Reliability Guide: Policy Module 96",
+    "category": "policy",
+    "content": "This document provides verified specifications for policy module 96. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 6. Reference key: REF-POLICY-96.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 96,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_governance_00097",
+    "title": "Production Reliability Guide: Governance Module 97",
+    "category": "governance",
+    "content": "This document provides verified specifications for governance module 97. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 7. Reference key: REF-GOVERNANCE-97.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 97,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_evaluation_00098",
+    "title": "Production Reliability Guide: Evaluation Module 98",
+    "category": "evaluation",
+    "content": "This document provides verified specifications for evaluation module 98. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 8. Reference key: REF-EVALUATION-98.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 98,
+      "status": "active"
+    }
+  },
+  {
+    "doc_id": "doc_rag_00099",
+    "title": "Production Reliability Guide: Rag Module 99",
+    "category": "rag",
+    "content": "This document provides verified specifications for rag module 99. Operational parameters dictate deterministic verification across boundaries. Invariants must hold under load condition 9. Reference key: REF-RAG-99.",
+    "metadata": {
+      "version": "1.4.0",
+      "index": 99,
+      "status": "active"
+    }
+  }
+]

@@ -1,11 +1,69 @@
 """Evaluation module for AI Reliability Engine.
 
-Separates deterministic trace evaluation from semantic output evaluation.
+Separates deterministic trace evaluation from semantic, probabilistic,
+and multimodal evaluation for the v0.2.0 AI Evaluation Platform.
 """
 
 from aireliability.core.protocols import Evaluator, Expectation
-from aireliability.evaluation import deterministic, semantic
+from aireliability.evaluation import (
+    agents,
+    claim,
+    consistency,
+    cost,
+    datasets,
+    deterministic,
+    experiments,
+    generation,
+    governance,
+    judges,
+    metrics,
+    online,
+    performance,
+    privacy,
+    rag,
+    regression,
+    robustness,
+    safety,
+    security,
+    semantic,
+)
+from aireliability.evaluation.agents import (
+    AgentEvaluator,
+    ToolUsageEvaluator,
+    TrajectoryEvaluator,
+)
 from aireliability.evaluation.assertions import AssertionResult
+from aireliability.evaluation.cicd import (
+    generate_github_actions_workflow,
+    generate_pr_comment,
+    write_github_workflow_template,
+)
+from aireliability.evaluation.claim import (
+    Claim,
+    ClaimClassification,
+    ClaimClassifier,
+    ClaimEvaluationSummary,
+    ClaimExtractor,
+    ClaimVerification,
+    FaithfulnessEvaluator,
+    GroundednessEvaluator,
+    HallucinationEvaluator,
+)
+from aireliability.evaluation.consistency import ConsistencyEvaluator
+from aireliability.evaluation.cost import (
+    CostEvaluator,
+    CostSuiteSummary,
+    ModelPricing,
+    PricingModel,
+)
+from aireliability.evaluation.datasets import (
+    DatasetManager,
+    DatasetSplit,
+    EvaluationDataset,
+    compare_datasets,
+    validate_dataset,
+)
+from aireliability.evaluation.engine import EvaluationEngine
 from aireliability.evaluation.expectations import (
     BaseExpectation,
     MaxCost,
@@ -18,6 +76,87 @@ from aireliability.evaluation.expectations import (
     ToolNotCalled,
     ToolOrder,
 )
+from aireliability.evaluation.experiments import (
+    ABComparisonResult,
+    ExperimentManager,
+    VariantConfig,
+    VariantResult,
+)
+from aireliability.evaluation.generation import (
+    CitationPresence,
+    CitationValidation,
+    CoherenceEvaluator,
+    CompletenessEvaluator,
+    CorrectnessEvaluator,
+    FormatValidation,
+    HelpfulnessEvaluator,
+    InstructionFollowingEvaluator,
+    JsonValid,
+    RegexMatch,
+    RelevanceEvaluator,
+    RequiredFields,
+    TypeValidation,
+)
+from aireliability.evaluation.governance import (
+    DimensionalScore,
+    EvaluationReporter,
+    GateDecision,
+    GatePolicy,
+    GateResult,
+    ReliabilityDimension,
+    ReliabilityGateEngine,
+    ReliabilityScoringEngine,
+    UnifiedReliabilityScore,
+)
+from aireliability.evaluation.judges import (
+    AnthropicJudge,
+    CustomCallableJudge,
+    JudgeReliabilityEvaluator,
+    JudgeReliabilityReport,
+    OllamaJudge,
+    OpenAIJudge,
+)
+from aireliability.evaluation.models import (
+    EvaluationReport,
+    EvaluationRequest,
+    EvaluationTarget,
+    MetricResult,
+)
+from aireliability.evaluation.online import (
+    ContinuousReliabilityMonitor,
+    DriftReport,
+    EvaluationDriftDetector,
+    OnlineEvaluationBridge,
+    ProductionRegressionHarvester,
+    ProductionSampler,
+    calculate_psi,
+)
+from aireliability.evaluation.performance import (
+    LatencyAttributionEvaluator,
+    PerformanceEvaluator,
+    PerformanceSummary,
+)
+from aireliability.evaluation.privacy import PrivacyEvaluator
+from aireliability.evaluation.rag import (
+    ContextEvaluator,
+    RAGEvaluator,
+    RerankingEvaluator,
+    RetrievalEvaluator,
+)
+from aireliability.evaluation.registry import EvaluatorRegistry, register_evaluator
+from aireliability.evaluation.regression import (
+    ComprehensiveRegressionSummary,
+    DimensionalRegression,
+    EvaluationRegressionDetector,
+    RegressionDimension,
+)
+from aireliability.evaluation.robustness import (
+    PerturbationGenerator,
+    PerturbationType,
+    RobustnessEvaluator,
+)
+from aireliability.evaluation.safety import SafetyEvaluator
+from aireliability.evaluation.security import SecurityEvaluator
 from aireliability.evaluation.semantic import (
     JudgeResult,
     MockSemanticJudge,
@@ -29,17 +168,94 @@ from aireliability.evaluation.semantic import (
 )
 
 __all__ = [
+    "ABComparisonResult",
+    "AgentEvaluator",
+    "AnthropicJudge",
     "AssertionResult",
     "BaseExpectation",
+    "CitationPresence",
+    "CitationValidation",
+    "Claim",
+    "ClaimClassification",
+    "ClaimClassifier",
+    "ClaimEvaluationSummary",
+    "ClaimExtractor",
+    "ClaimVerification",
+    "CoherenceEvaluator",
+    "CompletenessEvaluator",
+    "ComprehensiveRegressionSummary",
+    "ConsistencyEvaluator",
+    "ContextEvaluator",
+    "ContinuousReliabilityMonitor",
+    "CorrectnessEvaluator",
+    "CostEvaluator",
+    "CostSuiteSummary",
+    "CustomCallableJudge",
+    "DatasetManager",
+    "DatasetSplit",
+    "DimensionalRegression",
+    "DriftReport",
+    "DimensionalScore",
+    "EvaluationDataset",
+    "EvaluationDriftDetector",
+    "EvaluationEngine",
+    "EvaluationRegressionDetector",
+    "EvaluationReport",
+    "EvaluationReporter",
+    "EvaluationRequest",
+    "EvaluationTarget",
     "Evaluator",
+    "EvaluatorRegistry",
     "Expectation",
+    "ExperimentManager",
+    "FaithfulnessEvaluator",
+    "FormatValidation",
+    "GateDecision",
+    "GatePolicy",
+    "GateResult",
+    "generate_github_actions_workflow",
+    "generate_pr_comment",
+    "GroundednessEvaluator",
+    "HallucinationEvaluator",
+    "HelpfulnessEvaluator",
+    "InstructionFollowingEvaluator",
+    "JsonValid",
+    "JudgeReliabilityEvaluator",
+    "JudgeReliabilityReport",
     "JudgeResult",
+    "LatencyAttributionEvaluator",
     "MaxCost",
     "MaxLatency",
+    "MetricResult",
     "MockSemanticJudge",
+    "ModelPricing",
+    "OllamaJudge",
+    "OnlineEvaluationBridge",
+    "OpenAIJudge",
     "OutputContains",
     "OutputEquals",
+    "PerformanceEvaluator",
+    "PerformanceSummary",
+    "PerturbationGenerator",
+    "PerturbationType",
+    "PricingModel",
+    "PrivacyEvaluator",
+    "ProductionRegressionHarvester",
+    "ProductionSampler",
+    "RAGEvaluator",
+    "RegexMatch",
+    "RegressionDimension",
+    "RelevanceEvaluator",
+    "ReliabilityDimension",
+    "ReliabilityGateEngine",
+    "ReliabilityScoringEngine",
+    "RerankingEvaluator",
+    "RequiredFields",
+    "RetrievalEvaluator",
+    "RobustnessEvaluator",
+    "SafetyEvaluator",
     "SchemaMatch",
+    "SecurityEvaluator",
     "SemanticEvaluator",
     "SemanticExpectation",
     "SemanticJudge",
@@ -49,6 +265,35 @@ __all__ = [
     "ToolCalled",
     "ToolNotCalled",
     "ToolOrder",
+    "ToolUsageEvaluator",
+    "TrajectoryEvaluator",
+    "TypeValidation",
+    "UnifiedReliabilityScore",
+    "VariantConfig",
+    "VariantResult",
+    "agents",
+    "calculate_psi",
+    "claim",
+    "compare_datasets",
+    "consistency",
+    "cost",
+    "datasets",
     "deterministic",
+    "experiments",
+    "generation",
+    "governance",
+    "judges",
+    "metrics",
+    "online",
+    "performance",
+    "privacy",
+    "rag",
+    "regression",
+    "register_evaluator",
+    "robustness",
+    "safety",
+    "security",
     "semantic",
+    "validate_dataset",
+    "write_github_workflow_template",
 ]

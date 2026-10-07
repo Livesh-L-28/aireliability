@@ -36,15 +36,59 @@ class TenantStatus(StrEnum):
     DISABLED = "disabled"
 
 
+class TenantRole(StrEnum):
+    """Enterprise multi-tenant role taxonomy."""
+
+    OWNER = "OWNER"
+    ADMIN = "ADMIN"
+    ENGINEER = "ENGINEER"
+    ANALYST = "ANALYST"
+    VIEWER = "VIEWER"
+    AUDITOR = "AUDITOR"
+    SERVICE_ACCOUNT = "SERVICE_ACCOUNT"
+
+
+class TenantPermission(StrEnum):
+    """Granular permissions for enterprise operations."""
+
+    READ = "READ"
+    WRITE = "WRITE"
+    EXECUTE = "EXECUTE"
+    EVALUATE = "EVALUATE"
+    MANAGE_POLICIES = "MANAGE_POLICIES"
+    MANAGE_USERS = "MANAGE_USERS"
+    MANAGE_TENANTS = "MANAGE_TENANTS"
+    RUN_SAFETY = "RUN_SAFETY"
+    RUN_OPTIMIZATION = "RUN_OPTIMIZATION"
+    RUN_HEALING = "RUN_HEALING"
+    MANAGE_API_KEYS = "MANAGE_API_KEYS"
+    READ_AUDIT = "READ_AUDIT"
+    ADMIN = "ADMIN"
+
+
 class TenantContext(BaseModel):
     """Hierarchical context defining tenant, project, and namespace boundaries."""
 
     model_config = ConfigDict(frozen=True)
 
+    organization_id: str = "default_org"
     tenant_id: str = DEFAULT_TENANT_ID
     project_id: str = DEFAULT_PROJECT_ID
+    environment_id: str | None = None
     namespace: str = DEFAULT_NAMESPACE
+    actor_id: str = "system"
+    roles: list[TenantRole] = Field(default_factory=lambda: [TenantRole.VIEWER])
+    permissions: list[TenantPermission] = Field(default_factory=list)
     metadata: dict[str, Any] = Field(default_factory=dict)
+
+    @property
+    def environment(self) -> str | None:
+        return self.environment_id
+
+    def __init__(self, **data: Any) -> None:
+        if "environment" in data and "environment_id" not in data:
+            data["environment_id"] = data.pop("environment")
+        super().__init__(**data)
 
     @property
     def scope_key(self) -> str:
@@ -177,8 +221,10 @@ class Tenant(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     tenant_id: str
+    organization_id: str = "default_org"
     name: str
     status: TenantStatus = TenantStatus.ACTIVE
+    enabled: bool = True
     created_at: datetime = Field(default_factory=_utc_now)
     quota: ResourceQuota = Field(default_factory=ResourceQuota)
     rate_limit: RateLimitPolicy = Field(default_factory=RateLimitPolicy)
@@ -277,3 +323,120 @@ class TenantAccessPolicy:
         return TenantAccessPolicy.can_access(
             requestor, target_tenant_id, TenantAction.ADMINISTER, is_admin
         )
+
+
+class Organization(BaseModel):
+    """Top-level enterprise organizational container."""
+
+    model_config = ConfigDict(frozen=True)
+
+    organization_id: str = Field(
+        default_factory=lambda: _generate_tenant_entity_id("org")
+    )
+    name: str
+    created_at: datetime = Field(default_factory=_utc_now)
+
+
+class Project(BaseModel):
+    """Project workspace within a tenant boundary."""
+
+    model_config = ConfigDict(frozen=True)
+
+    project_id: str = Field(default_factory=lambda: _generate_tenant_entity_id("proj"))
+    tenant_id: str = DEFAULT_TENANT_ID
+    name: str = "Default Project"
+    created_at: datetime = Field(default_factory=_utc_now)
+
+
+class Environment(BaseModel):
+    """Execution environment (dev, staging, production) within a project."""
+
+    model_config = ConfigDict(frozen=True)
+
+    environment_id: str = Field(
+        default_factory=lambda: _generate_tenant_entity_id("env")
+    )
+    project_id: str = DEFAULT_PROJECT_ID
+    name: str = "dev"
+    created_at: datetime = Field(default_factory=_utc_now)
+
+
+class TenantMembership(BaseModel):
+    """User membership assignment to a tenant."""
+
+    model_config = ConfigDict(frozen=True)
+
+    membership_id: str = Field(
+        default_factory=lambda: _generate_tenant_entity_id("mem")
+    )
+    user_id: str
+    tenant_id: str
+    roles: list[TenantRole] = Field(default_factory=lambda: [TenantRole.VIEWER])
+    created_at: datetime = Field(default_factory=_utc_now)
+
+
+class TenantQuota(BaseModel):
+    """Resource consumption limits for a tenant."""
+
+    model_config = ConfigDict(frozen=True)
+
+    max_evaluations: int = 100_000
+    max_tokens: int = 100_000_000
+    max_api_requests: int = 500_000
+    max_safety_tests: int = 10_000
+    max_storage_mb: int = 50_000
+    max_concurrent_jobs: int = 10
+
+
+class TenantUsage(BaseModel):
+    """Observed resource consumption for a tenant."""
+
+    model_config = ConfigDict(frozen=True)
+
+    evaluations_count: int = 0
+    tokens_used: int = 0
+    requests_count: int = 0
+    safety_tests_run: int = 0
+    storage_used_mb: int = 0
+    active_jobs_count: int = 0
+
+
+class TenantResource(BaseModel):
+    """A generic resource owned strictly by a tenant."""
+
+    model_config = ConfigDict(frozen=True)
+
+    resource_id: str
+    tenant_id: str
+    organization_id: str | None = None
+    project_id: str | None = None
+    environment_id: str | None = None
+    resource_type: str  # dataset, evaluation, trace, policy, graph_node
+    name: str = ""
+    created_at: datetime = Field(default_factory=_utc_now)
+
+
+class TenantPolicy(BaseModel):
+    """Policy preferences bound to a specific tenant."""
+
+    model_config = ConfigDict(frozen=True)
+
+    tenant_id: str
+    policies: list[str] = Field(default_factory=list)
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class TenantAuditEvent(BaseModel):
+    """Immutable audit log entry recording privileged or cross-boundary attempts."""
+
+    model_config = ConfigDict(frozen=True)
+
+    event_id: str = Field(default_factory=lambda: _generate_tenant_entity_id("taudit"))
+    timestamp: datetime = Field(default_factory=_utc_now)
+    tenant_id: str
+    actor_id: str
+    action: str
+    resource: str
+    decision: str  # ALLOW, DENY
+    request_id: str = ""
+    details: dict[str, Any] = Field(default_factory=dict)

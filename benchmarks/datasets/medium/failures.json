@@ -1,0 +1,902 @@
+[
+  {
+    "failure_id": "fail_000000",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 0: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000000",
+    "confidence": 0.85,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000001",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 1: TASK.WRONG_ORDER",
+    "trace_id": "tr_000001",
+    "confidence": 0.86,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000002",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 2: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000002",
+    "confidence": 0.87,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000003",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 3: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000003",
+    "confidence": 0.88,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000004",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 4: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000004",
+    "confidence": 0.89,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000005",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 5: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000005",
+    "confidence": 0.9,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000006",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 6: TASK.WRONG_ORDER",
+    "trace_id": "tr_000006",
+    "confidence": 0.9099999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000007",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 7: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000007",
+    "confidence": 0.9199999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000008",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 8: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000008",
+    "confidence": 0.9299999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000009",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 9: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000009",
+    "confidence": 0.94,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000010",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 10: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000010",
+    "confidence": 0.95,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000011",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 11: TASK.WRONG_ORDER",
+    "trace_id": "tr_000011",
+    "confidence": 0.96,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000012",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 12: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000012",
+    "confidence": 0.97,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000013",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 13: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000013",
+    "confidence": 0.98,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000014",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 14: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000014",
+    "confidence": 0.99,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000015",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 15: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000015",
+    "confidence": 0.85,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000016",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 16: TASK.WRONG_ORDER",
+    "trace_id": "tr_000016",
+    "confidence": 0.86,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000017",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 17: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000017",
+    "confidence": 0.87,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000018",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 18: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000018",
+    "confidence": 0.88,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000019",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 19: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000019",
+    "confidence": 0.89,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000020",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 20: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000020",
+    "confidence": 0.9,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000021",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 21: TASK.WRONG_ORDER",
+    "trace_id": "tr_000021",
+    "confidence": 0.9099999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000022",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 22: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000022",
+    "confidence": 0.9199999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000023",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 23: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000023",
+    "confidence": 0.9299999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000024",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 24: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000024",
+    "confidence": 0.94,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000025",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 25: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000025",
+    "confidence": 0.95,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000026",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 26: TASK.WRONG_ORDER",
+    "trace_id": "tr_000026",
+    "confidence": 0.96,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000027",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 27: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000027",
+    "confidence": 0.97,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000028",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 28: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000028",
+    "confidence": 0.98,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000029",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 29: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000029",
+    "confidence": 0.99,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000030",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 30: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000030",
+    "confidence": 0.85,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000031",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 31: TASK.WRONG_ORDER",
+    "trace_id": "tr_000031",
+    "confidence": 0.86,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000032",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 32: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000032",
+    "confidence": 0.87,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000033",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 33: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000033",
+    "confidence": 0.88,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000034",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 34: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000034",
+    "confidence": 0.89,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000035",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 35: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000035",
+    "confidence": 0.9,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000036",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 36: TASK.WRONG_ORDER",
+    "trace_id": "tr_000036",
+    "confidence": 0.9099999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000037",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 37: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000037",
+    "confidence": 0.9199999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000038",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 38: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000038",
+    "confidence": 0.9299999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000039",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 39: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000039",
+    "confidence": 0.94,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000040",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 40: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000040",
+    "confidence": 0.95,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000041",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 41: TASK.WRONG_ORDER",
+    "trace_id": "tr_000041",
+    "confidence": 0.96,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000042",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 42: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000042",
+    "confidence": 0.97,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000043",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 43: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000043",
+    "confidence": 0.98,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000044",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 44: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000044",
+    "confidence": 0.99,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000045",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 45: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000045",
+    "confidence": 0.85,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000046",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 46: TASK.WRONG_ORDER",
+    "trace_id": "tr_000046",
+    "confidence": 0.86,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000047",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 47: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000047",
+    "confidence": 0.87,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000048",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 48: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000048",
+    "confidence": 0.88,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000049",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 49: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000049",
+    "confidence": 0.89,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000050",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 50: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000050",
+    "confidence": 0.9,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000051",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 51: TASK.WRONG_ORDER",
+    "trace_id": "tr_000051",
+    "confidence": 0.9099999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000052",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 52: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000052",
+    "confidence": 0.9199999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000053",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 53: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000053",
+    "confidence": 0.9299999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000054",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 54: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000054",
+    "confidence": 0.94,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000055",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 55: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000055",
+    "confidence": 0.95,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000056",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 56: TASK.WRONG_ORDER",
+    "trace_id": "tr_000056",
+    "confidence": 0.96,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000057",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 57: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000057",
+    "confidence": 0.97,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000058",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 58: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000058",
+    "confidence": 0.98,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000059",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 59: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000059",
+    "confidence": 0.99,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000060",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 60: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000060",
+    "confidence": 0.85,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000061",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 61: TASK.WRONG_ORDER",
+    "trace_id": "tr_000061",
+    "confidence": 0.86,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000062",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 62: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000062",
+    "confidence": 0.87,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000063",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 63: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000063",
+    "confidence": 0.88,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000064",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 64: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000064",
+    "confidence": 0.89,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000065",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 65: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000065",
+    "confidence": 0.9,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000066",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 66: TASK.WRONG_ORDER",
+    "trace_id": "tr_000066",
+    "confidence": 0.9099999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000067",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 67: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000067",
+    "confidence": 0.9199999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000068",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 68: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000068",
+    "confidence": 0.9299999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000069",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 69: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000069",
+    "confidence": 0.94,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000070",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 70: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000070",
+    "confidence": 0.95,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000071",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 71: TASK.WRONG_ORDER",
+    "trace_id": "tr_000071",
+    "confidence": 0.96,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000072",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 72: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000072",
+    "confidence": 0.97,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000073",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 73: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000073",
+    "confidence": 0.98,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000074",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 74: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000074",
+    "confidence": 0.99,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000075",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 75: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000075",
+    "confidence": 0.85,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000076",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 76: TASK.WRONG_ORDER",
+    "trace_id": "tr_000076",
+    "confidence": 0.86,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000077",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 77: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000077",
+    "confidence": 0.87,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000078",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 78: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000078",
+    "confidence": 0.88,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000079",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 79: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000079",
+    "confidence": 0.89,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000080",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 80: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000080",
+    "confidence": 0.9,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000081",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 81: TASK.WRONG_ORDER",
+    "trace_id": "tr_000081",
+    "confidence": 0.9099999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000082",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 82: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000082",
+    "confidence": 0.9199999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000083",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 83: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000083",
+    "confidence": 0.9299999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000084",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 84: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000084",
+    "confidence": 0.94,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000085",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 85: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000085",
+    "confidence": 0.95,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000086",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 86: TASK.WRONG_ORDER",
+    "trace_id": "tr_000086",
+    "confidence": 0.96,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000087",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 87: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000087",
+    "confidence": 0.97,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000088",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 88: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000088",
+    "confidence": 0.98,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000089",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 89: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000089",
+    "confidence": 0.99,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000090",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 90: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000090",
+    "confidence": 0.85,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000091",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 91: TASK.WRONG_ORDER",
+    "trace_id": "tr_000091",
+    "confidence": 0.86,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000092",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 92: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000092",
+    "confidence": 0.87,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000093",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 93: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000093",
+    "confidence": 0.88,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000094",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 94: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000094",
+    "confidence": 0.89,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000095",
+    "category": "TOOL",
+    "failure_type": "WRONG_TOOL",
+    "message": "Deterministic failure injected at step 95: TOOL.WRONG_TOOL",
+    "trace_id": "tr_000095",
+    "confidence": 0.9,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000096",
+    "category": "TASK",
+    "failure_type": "WRONG_ORDER",
+    "message": "Deterministic failure injected at step 96: TASK.WRONG_ORDER",
+    "trace_id": "tr_000096",
+    "confidence": 0.9099999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000097",
+    "category": "PERFORMANCE",
+    "failure_type": "LATENCY",
+    "message": "Deterministic failure injected at step 97: PERFORMANCE.LATENCY",
+    "trace_id": "tr_000097",
+    "confidence": 0.9199999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000098",
+    "category": "SCHEMA",
+    "failure_type": "TASK_INCORRECT",
+    "message": "Deterministic failure injected at step 98: SCHEMA.TASK_INCORRECT",
+    "trace_id": "tr_000098",
+    "confidence": 0.9299999999999999,
+    "timestamp": "2026-10-07T12:00:00Z"
+  },
+  {
+    "failure_id": "fail_000099",
+    "category": "SAFETY",
+    "failure_type": "INSUFFICIENT_CONTEXT",
+    "message": "Deterministic failure injected at step 99: SAFETY.INSUFFICIENT_CONTEXT",
+    "trace_id": "tr_000099",
+    "confidence": 0.94,
+    "timestamp": "2026-10-07T12:00:00Z"
+  }
+]

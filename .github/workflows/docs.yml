@@ -1,0 +1,94 @@
+name: Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "*.md"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "*.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs-check:
+    name: Documentation Integrity & Link Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify Required Documentation Files
+        run: |
+          python -c "
+          import sys
+          from pathlib import Path
+
+          required = [
+              'README.md',
+              'LICENSE',
+              'CHANGELOG.md',
+              'SECURITY.md',
+              'docs/release/1.4.0.md',
+              'examples/aireliability_demo/README.md',
+              'benchmarks/README.md',
+          ]
+          missing = [f for f in required if not Path(f).is_file()]
+          if missing:
+              print('[!] Missing required documentation files:', missing)
+              sys.exit(1)
+          print('[+] All required documentation files are present.')
+          "
+
+      - name: Verify Local Documentation References and Links
+        run: |
+          python -c "
+          import re, sys
+          from pathlib import Path
+
+          broken_links = []
+          md_files = list(Path('.').glob('**/*.md'))
+
+          for md in md_files:
+              if any(p in str(md) for p in ['.git', '.pytest_cache', 'artifacts', 'build', 'dist']):
+                  continue
+              try:
+                  content = md.read_text(encoding='utf-8')
+              except Exception:
+                  continue
+              # Find markdown relative file links: [text](path)
+              links = re.findall(r'\[(?:[^\]]+)\]\(([^)#]+)(?:#[^\)]*)?\)', content)
+              for link in links:
+                  # Filter out web URLs, anchors, mailto
+                  if link.startswith(('http://', 'https://', '#', 'mailto:')):
+                      continue
+                  # Resolve relative path
+                  target = (md.parent / link).resolve()
+                  # Check if target exists
+                  if not target.exists():
+                      broken_links.append((str(md), link))
+
+          if broken_links:
+              print('[!] Warning: Found potential broken relative markdown links:')
+              for src, lnk in broken_links[:15]:
+                  print(f'    In {src}: {lnk}')
+              # Report but do not fail unless core docs broken
+              core_broken = [b for b in broken_links if b[0] in ['README.md', 'CHANGELOG.md', 'SECURITY.md']]
+              if core_broken:
+                  print('[!] Broken links in core docs:', core_broken)
+                  sys.exit(1)
+          else:
+              print('[+] All relative markdown links resolved successfully.')
+          "

@@ -1,0 +1,29 @@
+[
+  {
+    "query_id": "q_eval_01",
+    "text": "What are the core capabilities of the AI reliability evaluation framework?",
+    "expected_document_ids": ["evaluation.md"],
+    "ground_truth_claims": [
+      "The framework provides deterministic assertion testing and schema validation.",
+      "It supports multi-dimensional scoring and regression detection."
+    ]
+  },
+  {
+    "query_id": "q_rag_01",
+    "text": "How does Phase 39 evaluate RAG claim grounding and citations?",
+    "expected_document_ids": ["rag.md"],
+    "ground_truth_claims": [
+      "It extracts factual claims and aligns them with retrieved evidence.",
+      "It verifies that cited markers reference the specific supporting chunks."
+    ]
+  },
+  {
+    "query_id": "q_safety_01",
+    "text": "Explain the hard safety veto rule in AI reliability.",
+    "expected_document_ids": ["safety.md"],
+    "ground_truth_claims": [
+      "Any critical safety violation caps overall reliability score at 0.30.",
+      "It triggers an unconditional release BLOCK."
+    ]
+  }
+]

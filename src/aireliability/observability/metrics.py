@@ -82,6 +82,11 @@ class Counter:
         """Return mapping of labels to values."""
         return {dict(k): v for k, v in self._values.items()}
 
+    @property
+    def value(self) -> float:
+        """Return the unlabelled default value of this counter."""
+        return self.get()
+
 
 class Gauge:
     """Instantaneous numerical gauge with label support."""

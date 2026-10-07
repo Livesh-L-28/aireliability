@@ -145,6 +145,19 @@ class EvaluationResult(BaseModel):
     message: str = ""
     evidence: Any = None
     metadata: dict[str, Any] = Field(default_factory=dict)
+    metric: str | None = None
+    threshold: float | None = None
+    confidence: float | None = None
+    reasoning: str | None = None
+    evaluator_type: str | None = None
+    provider: str | None = None
+    model: str | None = None
+    dataset: str | None = None
+    test_case: str | None = None
+    execution_id: str | None = None
+    timestamp: datetime = Field(default_factory=_utc_now)
+    latency: float | None = None
+    cost: float | None = None
 
     @model_validator(mode="after")
     def validate_score(self) -> "EvaluationResult":
@@ -163,12 +176,20 @@ class FailureReport(BaseModel):
     trace_id: str
     test_id: str | None = None
     category: str
-    type: str
+    type: str = "general_failure"
     severity: FailureSeverity = FailureSeverity.MEDIUM
     message: str
     evidence: Any = None
     confidence: float = 1.0
     metadata: dict[str, Any] = Field(default_factory=dict)
+
+    @model_validator(mode="before")
+    @classmethod
+    def _default_type(cls, data: Any) -> Any:
+        if isinstance(data, dict) and ("type" not in data or data["type"] is None):
+            data = dict(data)
+            data["type"] = data.get("category", "general_failure")
+        return data
 
     @model_validator(mode="after")
     def validate_confidence(self) -> "FailureReport":
@@ -204,6 +225,15 @@ class RunResult(BaseModel):
     failures: list[FailureReport] = Field(default_factory=list)
     passed: bool | None = None
     metadata: dict[str, Any] = Field(default_factory=dict)
+
+    @model_validator(mode="before")
+    @classmethod
+    def _remap_test_alias(cls, data: Any) -> Any:
+        """Allow 'test_case' as an alias for 'test' when constructing RunResult."""
+        if isinstance(data, dict) and "test_case" in data and "test" not in data:
+            data = dict(data)
+            data["test"] = data.pop("test_case")
+        return data
 
     @model_validator(mode="after")
     def determine_passed_status(self) -> "RunResult":

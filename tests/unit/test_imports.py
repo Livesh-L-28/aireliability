@@ -54,7 +54,7 @@ from aireliability.storage import SQLiteStorage, StorageBackend
 
 def test_package_import_and_version() -> None:
     """Verify that aireliability can be imported and has a valid version."""
-    assert aireliability.__version__ == "0.1.0"
+    assert aireliability.__version__ == "1.4.0"
 
 
 def test_core_models_instantiation() -> None:

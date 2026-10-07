@@ -1,0 +1,20 @@
+[
+  {
+    "task_id": "task_math_01",
+    "request_text": "Calculate the projected reliability score after a 15% improvement from 0.80.",
+    "expected_tools": ["calculator"],
+    "goals": ["Compute 0.80 * 1.15", "Return final numerical answer 0.92"]
+  },
+  {
+    "task_id": "task_search_01",
+    "request_text": "Find information about the hard safety veto and summarize the impact.",
+    "expected_tools": ["knowledge_search", "document_lookup"],
+    "goals": ["Search safety documentation", "Lookup safety.md", "Summarize 0.30 cap"]
+  },
+  {
+    "task_id": "task_status_01",
+    "request_text": "Check system status for evaluation and prediction components.",
+    "expected_tools": ["status_lookup"],
+    "goals": ["Query component statuses", "Report operational health"]
+  }
+]

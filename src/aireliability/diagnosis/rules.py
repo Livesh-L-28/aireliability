@@ -264,13 +264,15 @@ def diagnose_failure_report(
         category = RootCauseCategory.PERFORMANCE
         cause_type = RootCauseType.LATENCY_REGRESSION
         max_lat = ev_dict.get("max_latency_ms")
-        act_lat = ev_dict.get("actual_latency_ms") or trace.latency_ms
+        act_lat = ev_dict.get("actual_latency_ms") or trace.latency_ms or 0.0
+        max_lat_val = float(max_lat) if max_lat is not None else 1000.0
+        act_lat_val = float(act_lat) if act_lat is not None else 0.0
+        delta_lat = act_lat_val - max_lat_val
 
         desc = (
-            f"Execution latency regression: measured {act_lat:.1f}ms "
-            f"exceeding budget of {max_lat}ms."
+            f"Execution latency regression: measured {act_lat_val:.1f}ms "
+            f"exceeding budget of {max_lat_val:.1f}ms."
         )
-        delta_lat = act_lat - float(max_lat)
         ev_list.append(
             Evidence(
                 source="execution_trace",

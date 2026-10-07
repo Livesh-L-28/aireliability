@@ -1,0 +1,106 @@
+name: Benchmarks
+
+on:
+  pull_request:
+    paths:
+      - "src/**"
+      - "benchmarks/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "src/**"
+      - "benchmarks/**"
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Benchmark execution mode (smoke, quick, standard, full)"
+        required: true
+        default: "quick"
+        type: choice
+        options:
+          - smoke
+          - quick
+          - standard
+          - full
+      tolerance:
+        description: "Percentage regression tolerance"
+        required: false
+        default: "35.0"
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    name: Scalability & Performance Benchmarks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+          python -m pip install psutil
+
+      - name: Determine Benchmark Execution Mode
+        id: select_mode
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "mode=smoke" >> $GITHUB_OUTPUT
+            echo "tolerance=40.0" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "release" ]; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+            echo "tolerance=25.0" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ github.event.inputs.mode }}" >> $GITHUB_OUTPUT
+            echo "tolerance=${{ github.event.inputs.tolerance }}" >> $GITHUB_OUTPUT
+          else
+            echo "mode=quick" >> $GITHUB_OUTPUT
+            echo "tolerance=30.0" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Execute Performance Benchmark Suite
+        run: |
+          python benchmarks/run_benchmarks.py --mode ${{ steps.select_mode.outputs.mode }}
+
+      - name: Compare Against Baseline
+        id: compare
+        run: |
+          if [ -f "benchmarks/results/baseline.json" ] && [ -f "benchmarks/results/performance.json" ]; then
+            python benchmarks/compare.py \
+              benchmarks/results/baseline.json \
+              benchmarks/results/performance.json \
+              --tolerance ${{ steps.select_mode.outputs.tolerance }} || true
+          fi
+
+      - name: Publish Benchmark Summary to GitHub
+        if: always()
+        run: |
+          if [ -f "benchmarks/results/PERFORMANCE_REPORT.md" ]; then
+            echo "## Performance Benchmark Summary (${{ steps.select_mode.outputs.mode }})" >> $GITHUB_STEP_SUMMARY
+            cat benchmarks/results/PERFORMANCE_REPORT.md >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Upload Benchmark Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: benchmark-artifacts-${{ steps.select_mode.outputs.mode }}
+          path: |
+            benchmarks/results/performance.json
+            benchmarks/results/baseline.json
+            benchmarks/results/PERFORMANCE_REPORT.md
+            PERFORMANCE_BENCHMARK_REPORT.md
+          retention-days: 14
