@@ -213,7 +213,7 @@ jobs:
     # 1. Must be a published git tag push: refs/tags/v*.*.*
     # 2. Must NOT be dry_run
     # 3. Requires GitHub environment 'pypi' approval
-    if: startsWith(github.ref, 'refs/tags/v') && github.event.inputs.dry_run != 'true' && false
+    if: startsWith(github.ref, 'refs/tags/v') && github.event.inputs.dry_run != 'true'
     environment:
       name: pypi
       url: https://pypi.org/p/aireliability
