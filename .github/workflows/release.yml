@@ -189,11 +189,17 @@ jobs:
           name: release-dist-${{ needs.build-artifacts.outputs.version }}
           path: dist/
 
+      - name: Prepare TestPyPI Distribution Packages
+        run: |
+          mkdir -p publish-test
+          cp dist/*.whl publish-test/
+          cp dist/*.tar.gz publish-test/
+
       - name: Publish to TestPyPI via Trusted Publishing
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
-          packages-dir: dist/
+          packages-dir: publish-test/
           skip-existing: true
 
       - name: Verify TestPyPI Installation
@@ -226,8 +232,42 @@ jobs:
           name: release-dist-${{ needs.build-artifacts.outputs.version }}
           path: dist/
 
+      - name: Prepare and Validate Production PyPI Distribution Packages
+        run: |
+          mkdir -p publish
+          cp dist/*.whl publish/
+          cp dist/*.tar.gz publish/
+
+          # Strict validation: ensure publish/ contains exclusively .whl and .tar.gz distributions
+          for file in publish/*; do
+            case "$file" in
+              *.whl|*.tar.gz) ;;
+              *)
+                echo "ERROR: Disallowed non-package file detected in publish/: $file" >&2
+                exit 1
+                ;;
+            esac
+          done
+
+          # Verify that SHA256SUMS or other non-package files are strictly absent
+          if [ -f publish/SHA256SUMS ] || [ $(ls -1 publish/*.txt publish/*.md publish/*.json publish/*.zip 2>/dev/null | wc -l) -gt 0 ]; then
+            echo "ERROR: Disallowed non-distribution artifacts present in publish/" >&2
+            exit 1
+          fi
+
+          # Ensure exactly one wheel and one sdist exist
+          WHL_COUNT=$(ls -1 publish/*.whl 2>/dev/null | wc -l)
+          SDIST_COUNT=$(ls -1 publish/*.tar.gz 2>/dev/null | wc -l)
+          if [ "$WHL_COUNT" -ne 1 ] || [ "$SDIST_COUNT" -ne 1 ]; then
+            echo "ERROR: Expected exactly 1 wheel and 1 sdist, found $WHL_COUNT wheels and $SDIST_COUNT sdists" >&2
+            exit 1
+          fi
+
+          echo "Verified publish/ contents:"
+          ls -la publish/
+
       - name: Publish to Production PyPI via Trusted Publishing OIDC
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages-dir: dist/
+          packages-dir: publish/
           verify-metadata: true
